@@ -1,4 +1,4 @@
-package goruckus
+package ruckus
 
 import (
 	"bytes"

@@ -1,4 +1,4 @@
-package goruckus
+package ruckus
 
 const (
 	L2ACL_Restriction_ALLOW = "ALLOW"
