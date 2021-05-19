@@ -35,7 +35,7 @@ func (rks *Ruckus) SetBaseUrl(address string, port interface{}) {
 	intPort := 8443
 	switch p := port.(type) {
 	case int:
-		if p < 1 || p > 65535 {
+		if p > 0 && p < 65536 {
 			intPort = p
 		}
 	case string, bool, nil:
