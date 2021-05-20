@@ -505,7 +505,7 @@ func (rks *Ruckus) AddMacsToL2acl(mac ...string) error {
 	currentMacs := acl.RuleMacs
 
 	// check MAC integrity
-	rks.checkMacs(mac...)
+	rks.CheckMacs(mac...)
 	if rks.Err() != nil {
 		return rks.setErr(rks.Err())
 	}
