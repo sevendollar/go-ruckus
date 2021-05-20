@@ -30,7 +30,7 @@ type Ruckus struct {
 	debug bool
 }
 
-func (rks *Ruckus) SetBaseUrl(address string, port interface{}) {
+func (rks *Ruckus) SetBaseUrl(address string, port interface{}) *Ruckus {
 	// "https://<address>:<port>/wsg/api/public"
 	intPort := 8443
 	switch p := port.(type) {
@@ -42,6 +42,8 @@ func (rks *Ruckus) SetBaseUrl(address string, port interface{}) {
 	}
 
 	rks.baseURL = fmt.Sprintf("https://%s:%d/wsg/api/public", address, intPort)
+
+	return rks
 }
 
 func NewRuckus() *Ruckus {
