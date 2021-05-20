@@ -183,7 +183,7 @@ func (rks *Ruckus) CheckMacsWithNoDuplitation(mac ...string) *Ruckus {
 	return rks
 }
 
-func (rks *Ruckus) checkMacs(mac ...string) *Ruckus {
+func (rks *Ruckus) CheckMacs(mac ...string) *Ruckus {
 	if rks.Err() != nil {
 		return rks
 	}
