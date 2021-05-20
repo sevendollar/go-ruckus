@@ -1496,3 +1496,11 @@ func checkJson(bj *[]byte) {
 		*bj = []byte("{}")
 	}
 }
+
+func (rks *Ruckus) CheckBaseUrl() bool {
+	if rks.baseURL != "" {
+		return true
+	}
+	rks.setErr(fmt.Errorf("should run %s method first", setBaseUrlMethod))
+	return false
+}

@@ -6,4 +6,5 @@ const (
 
 	setZoneByNameMethod  = "(*Ruckus).SetZoneByName"
 	setL2aclByNameMethod = "(*Ruckus).SetL2aclByName"
+	setBaseUrlMethod     = "(*Ruckus).SetBaseUrl"
 )
